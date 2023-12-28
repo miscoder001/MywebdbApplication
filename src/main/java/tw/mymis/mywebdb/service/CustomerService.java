@@ -3,7 +3,6 @@ package tw.mymis.mywebdb.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 import tw.mymis.mywebdb.mapper.CustomerMapper;
 import tw.mymis.mywebdb.model.Customer;
 
