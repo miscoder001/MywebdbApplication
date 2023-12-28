@@ -15,7 +15,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Setter
 @Getter
-public class Orders {
+public class Orders_demo {
     int orderNumber;
     Date orderDate;
     Date requiredDate;

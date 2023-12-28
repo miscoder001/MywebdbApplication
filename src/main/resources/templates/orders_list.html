@@ -36,14 +36,14 @@
         <th>訂單日期</th>
         <th>希望到貨日</th>
         <th>訂單說明</th>
-        <th>買方名稱</th>
+        <th>客戶編號</th>
     </tr>
     <tr th:each="order  : ${orders }">
         <td th:text="${order.getOrderNumber()}"></td>
         <td th:text="${order.getOrderDate()}">Maria Anders</td>
         <td th:text="${order.getRequiredDate()}">Germany</td>
         <td th:text="${order.getComments()}">Germany</td>
-        <td th:text="${order.getCompanyName()}">Germany</td>
+        <td th:text="${order.getCustomerNumber()}">Germany</td>
     </tr>
 </table>
 

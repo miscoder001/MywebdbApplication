@@ -5,7 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import tw.mymis.mywebdb.Data.DBProvider;
-import tw.mymis.mywebdb.model.Orders;
+import tw.mymis.mywebdb.model.Orders_demo;
+import tw.mymis.mywebdb.service.CustomerService;
 import tw.mymis.mywebdb.service.DBService;
 
 import java.sql.ResultSet;
@@ -19,6 +20,9 @@ public class ReportController {
     // 託管版本
     @Autowired
     DBService dbService;
+
+    @Autowired
+    CustomerService customerService;
 
     @GetMapping("/test123")
     public String sayHello(Model model) {
@@ -37,7 +41,7 @@ public class ReportController {
     public String getOrderList(Model model) {
         // 提供一個訂單總覽  點選其中一筆 在顯示 訂單明細
         ResultSet rs = null;
-        List<Orders> orders;
+        List<Orders_demo> orders;
         String sql = """
                 SELECT
                   orders.orderNumber,
@@ -58,11 +62,6 @@ public class ReportController {
         return "orders_list";
     }
 
-
-    public String getOrderDetails() {
-        // 提供一個訂單總覽  點選其中一筆 在顯示 訂單明細
-        return "orderDetail";
-    }
 
 
 }
