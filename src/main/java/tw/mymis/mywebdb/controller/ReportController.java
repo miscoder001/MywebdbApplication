@@ -24,7 +24,11 @@ public class ReportController {
     public String sayHello(Model model) {
         // 注意重點:  dbSevice 並無  new DBServer() 的過程  就單純 宣告 使用  但注意 有加上＠Autowired
         String name =  dbService.getOrdersAll();
+        Long cusa = dbService.countByCountry("USA");
+        Long cfr = dbService.countByCountry("france");
         model.addAttribute("name", name);
+        model.addAttribute("USA", cusa);
+        model.addAttribute("France", cfr);
         return "hello";
     }
 
