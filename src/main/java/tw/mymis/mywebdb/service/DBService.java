@@ -16,6 +16,7 @@ public class DBService {
         String sql = "select customerName from customers where customerNumber = 129";
         // queryForObject 要確定 sql 只會回傳一個欄位  哪一種類型 請在地二個參數告知
         String name = jdbcTemplate.queryForObject(sql,String.class);
+
         return name;
     }
 
